@@ -10,16 +10,20 @@ public class screenSwitchScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        questionScreen.SetActive(true);
+        answerScreen.SetActive(false);
     }
 
     public void Question()
     {
-
+        questionScreen.SetActive(true);
+        answerScreen.SetActive(false);
     }
 
     public void Answer()
     {
+        questionScreen.SetActive(false);
+        answerScreen.SetActive(true);
 
     }
 
