@@ -24,8 +24,5 @@ public class screenSwitchScript : MonoBehaviour
     {
         questionScreen.SetActive(false);
         answerScreen.SetActive(true);
-
     }
-
-
 }
