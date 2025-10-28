@@ -40,11 +40,11 @@ public class questionManager : MonoBehaviour
     }
 
     
-    void QuestionPicker()
+    public void QuestionPicker()
     {
         int idx = Random.Range(0, questions.Length);
         questionText.text = questions[idx];
-        questions.RemoveAt(idx);
+        
     
     }
 }
