@@ -51,9 +51,5 @@ public class questionManager : MonoBehaviour
         questionText.text = questions[idx];
         AnswerPicker();
     }
-    
-    private void AnswerPicker()
-    {
-        
-    }
+
 }
