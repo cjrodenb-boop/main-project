@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic; // imports are not automatic?
+using TMPro;
 
 public class answersManager : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class answersManager : MonoBehaviour
 
         for (int i = 0; i < buttons.Length; i++)
         {
-            Text buttonText = buttons[i].GetComponentInChildren<Text>(); // im not sure if this is correct
+            TMP_Text buttonText = buttons[i].GetComponentInChildren<TMP_Text>(); // im not sure if this is correct
             buttonText.text = selected[i];
         }  
     } 
