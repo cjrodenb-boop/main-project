@@ -44,7 +44,7 @@ public class questionManager : MonoBehaviour
     {
         int idx = Random.Range(0, questions.Length);
         questionText.text = questions[idx];
-        AnswerPicker();
+
     }
 
 }
