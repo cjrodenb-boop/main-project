@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic; // imports are not automatic?
 
 public class answersManager : MonoBehaviour
 {
@@ -20,14 +22,15 @@ public class answersManager : MonoBehaviour
     
     public void AnswerPicker()
     {
-        List<string> copy = new List<string>(answers);
+        List<string> answersCopy = new List<string>(answers);
+        
 
         List<string> selected = new List<string>();
         for (int i = 0; i < 4; i++)
         {
-            int idx = Random.Range(0, copy.Count);
+            int idx = Random.Range(0, answersCopy.Count);
             selected.Add(answersCopy[idx]);
-            copy.RemoveAt(idx);
+            answersCopy.RemoveAt(idx);
         }
 
         for (int i = 0; i < selected.Count; i++)
