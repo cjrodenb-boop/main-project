@@ -33,11 +33,6 @@ public class questionManager : MonoBehaviour
         "Canbara is the capital of which country?"
     };
 
-    private string[] choices = new string[]
-    {
-        "Nigeria", "Kenya", "Ethiopia", "Ghana"
-    };
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

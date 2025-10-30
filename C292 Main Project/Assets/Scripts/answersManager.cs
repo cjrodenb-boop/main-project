@@ -3,22 +3,24 @@ using UnityEngine;
 public class answersManager : MonoBehaviour
 {
 
-    [SerializeField] private Button[] buttons;
+   
 
     private string[] questions = new string[]
     {
-
+        "Nigeria", "Kenya", "Ethiopia", "Ghana"
     };
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }
+        AnswerPicker();
 
-    // Update is called once per frame
-    void Update()
+    }
+    
+    public void AnswerPicker()
     {
         
     }
+
+    
 }
