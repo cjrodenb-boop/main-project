@@ -9,7 +9,7 @@ public class questionManager : MonoBehaviour
     private string[] questions = new string[]
     {
         "Which West African country is the most populous on the continent?",
-        "Which country’s flag is shown below?",
+        "Nairobi is the capital of which country?",
         "Which country is considered the origin of coffee?",
         "Which country is known for cocoa production?",
         "Which country is the most populous in the world?",
@@ -33,6 +33,18 @@ public class questionManager : MonoBehaviour
         "Canbara is the capital of which country?"
     };
 
+    private string[] correctAnswers = new string[]
+    {
+        "Nigeria", "Kenya", "Ethiopia", "Ghana", "China", "India", "Japan", "Thailand",
+        "Philippines", "Mongolia", "Bhutan", "United States", "Cuba", "Brazil", "Chile",
+        "Peru", "France", "Germany", "Italy", "Spain", "Poland", "Norway", "Albania",
+        "Austrailia", "Kiribati"
+    };
+
+    public string CorrectAnswer { get; private set; }
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,8 +56,8 @@ public class questionManager : MonoBehaviour
     {
         int idx = Random.Range(0, questions.Length);
         questionText.text = questions[idx];
+        CorrectAnswer = correctAnswers[idx];
         
-
     }
 
 }
