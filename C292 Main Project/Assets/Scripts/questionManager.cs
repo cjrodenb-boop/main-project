@@ -1,12 +1,13 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic; 
 
 public class questionManager : MonoBehaviour
 {
 
     [SerializeField] private TMP_Text questionText;
 
-    private string[] questions = new string[]
+    private List<string> questions = new List<string>()
     {
         "Which West African country is the most populous on the continent?",
         "Nairobi is the capital of which country?",
@@ -35,7 +36,7 @@ public class questionManager : MonoBehaviour
         "Which country has a non-phonetic spelling?"
     };
 
-    private string[] correctAnswers = new string[]
+    private List<string> correctAnswers = new List<string>()
     {
         "Nigeria", "Kenya", "Ethiopia", "Ghana", "China", "India", "Japan", "Thailand",
         "Philippines", "Mongolia", "Bhutan", "United States", "Cuba", "Brazil", "Chile",
@@ -56,8 +57,10 @@ public class questionManager : MonoBehaviour
 
     public void QuestionPicker()
     {
-        int idx = Random.Range(0, questions.Length);
+        int idx = Random.Range(0, questions.Count);
         questionText.text = questions[idx];
         CorrectAnswer = correctAnswers[idx];
+        questions.RemoveAt(idx);
+        correctAnswers.RemoveAt(idx);
     }
 }
