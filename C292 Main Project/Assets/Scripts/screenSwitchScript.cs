@@ -15,7 +15,7 @@ public class screenSwitchScript : MonoBehaviour
         questionScreen.SetActive(true);
         answerScreen.SetActive(false);
         qm.QuestionPicker();
-        am.AnswerPicker();
+        am.AnswerPicker(qm.CorrectAnswer);
     }
 
     public void Question()
@@ -23,7 +23,7 @@ public class screenSwitchScript : MonoBehaviour
         questionScreen.SetActive(true);
         answerScreen.SetActive(false);
         qm.QuestionPicker();
-        am.AnswerPicker();
+        am.AnswerPicker(qm.CorrectAnswer);
     }
 
     public void Answer()

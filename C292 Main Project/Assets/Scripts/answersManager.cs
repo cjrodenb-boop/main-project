@@ -16,23 +16,23 @@ public class answersManager : MonoBehaviour
     };
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        AnswerPicker();
-    }
+    void Start() {}
     
-    public void AnswerPicker()
+    public void AnswerPicker(string correctAnswer)
     {
-        List<string> answersCopy = new List<string>(answers);
+        List<string> wrong = new List<string>(answers);
+        wrong.Remove(correctAnswer);
         
 
         List<string> selected = new List<string>();
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
         {
-            int idx = Random.Range(0, answersCopy.Count);
-            selected.Add(answersCopy[idx]);
-            answersCopy.RemoveAt(idx);
+            int idx = Random.Range(0, wrong.Count);
+            selected.Add(wrong[idx]);
+            wrong.RemoveAt(idx);
         }
+
+        selected.Add(correctAnswer);
 
         for (int i = 0; i < selected.Count; i++)
         {
