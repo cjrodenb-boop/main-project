@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic; 
 
@@ -6,6 +7,7 @@ public class questionManager : MonoBehaviour
 {
 
     [SerializeField] private TMP_Text questionText;
+    //[SerializeField] private List<AnswerButton> answerButtons;
 
     private List<string> questions = new List<string>()
     {
@@ -57,10 +59,16 @@ public class questionManager : MonoBehaviour
 
     public void QuestionPicker()
     {
+
         int idx = Random.Range(0, questions.Count);
         questionText.text = questions[idx];
         CorrectAnswer = correctAnswers[idx];
         questions.RemoveAt(idx);
         correctAnswers.RemoveAt(idx);
+    }
+
+    public void MethodName(string selectedAnswer)
+    {
+        
     }
 }
