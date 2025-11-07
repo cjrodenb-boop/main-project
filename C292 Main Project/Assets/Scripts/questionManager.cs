@@ -73,10 +73,10 @@ public class questionManager : MonoBehaviour
     {
         foreach (answerButtonScript ab in answerButtons)
         {
-        if (ab.buttonText.text == CorrectAnswer)
-                ab.GetComponent<Image>().color = Color.green;
+            if (ab.buttonText.text == CorrectAnswer)
+                ab.GetComponent<Image>().color = new Color(0.6f, 1f, 0.6f);
             else
-                ab.GetComponent<Image>().color = Color.red;
+                ab.GetComponent<Image>().color = new Color(1f, 0.4f, 0.4f, 1f);
         } 
     }
 }
