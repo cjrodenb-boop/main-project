@@ -9,7 +9,7 @@ public class answerButtonScript : MonoBehaviour
     
     public void OnClick()
     {
-        qm.MethodName(buttonText.text);
+        qm.AnswerChosen(buttonText.text);
     }
     
 }

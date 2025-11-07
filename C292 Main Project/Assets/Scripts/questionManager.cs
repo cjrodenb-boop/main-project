@@ -7,7 +7,7 @@ public class questionManager : MonoBehaviour
 {
 
     [SerializeField] private TMP_Text questionText;
-    [SerializeField] private List<AnswerButton> answerButtons;
+    [SerializeField] private List<answerButtonScript> answerButtons;
 
     private List<string> questions = new List<string>()
     {
@@ -69,15 +69,14 @@ public class questionManager : MonoBehaviour
         correctAnswers.RemoveAt(idx);
     }
 
-    public void MethodName(string selectedAnswer)
+    public void AnswerChosen(string selectedAnswer)
     {
-        foreach (AnswerButton ab in answerButtons)
+        foreach (answerButtonScript ab in answerButtons)
         {
         if (ab.buttonText.text == CorrectAnswer)
                 ab.GetComponent<Image>().color = Color.green;
             else
                 ab.GetComponent<Image>().color = Color.red;
-        }
-        
+        } 
     }
 }
