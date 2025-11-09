@@ -1019,7 +1019,7 @@ Transform:
   m_GameObject: {fileID: 145559984}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.75, y: 0.5, z: 0}
+  m_LocalPosition: {x: 12.75, y: 1.5, z: 0}
   m_LocalScale: {x: 13, y: 5.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1141,7 +1141,7 @@ Transform:
   m_GameObject: {fileID: 165851519}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.75, y: 3.5, z: 0}
+  m_LocalPosition: {x: 12.75, y: 4, z: 0}
   m_LocalScale: {x: 13, y: 5.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1379,7 +1379,7 @@ Transform:
   m_GameObject: {fileID: 222220807}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -2, z: 0}
+  m_LocalPosition: {x: 4.5, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1469,7 +1469,7 @@ Transform:
   m_GameObject: {fileID: 224586648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.5, y: -1, z: 0}
+  m_LocalPosition: {x: 19.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1773,7 +1773,7 @@ Transform:
   m_GameObject: {fileID: 323739642}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.75, y: 0.5, z: 0}
+  m_LocalPosition: {x: 12.75, y: 1.5, z: 0}
   m_LocalScale: {x: 12.749999, y: 5.225, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1921,7 +1921,7 @@ Transform:
   m_GameObject: {fileID: 368509738}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21, y: 0, z: 0}
+  m_LocalPosition: {x: 21, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2482,6 +2482,7 @@ GameObject:
   - component: {fileID: 527512076}
   - component: {fileID: 527512075}
   - component: {fileID: 527512077}
+  - component: {fileID: 527512078}
   m_Layer: 5
   m_Name: Button 2
   m_TagString: Untagged
@@ -2603,6 +2604,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 527512078}
+        m_TargetAssemblyTypeName: answerButtonScript, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &527512078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527512073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f249140806334aca845d617940d147c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::answerButtonScript
+  buttonText: {fileID: 306660157}
+  qm: {fileID: 1618657192}
 --- !u!1 &539050725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2687,7 +2714,7 @@ Transform:
   m_GameObject: {fileID: 539050725}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: -1, z: 0}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2705,6 +2732,7 @@ GameObject:
   - component: {fileID: 541597938}
   - component: {fileID: 541597937}
   - component: {fileID: 541597935}
+  - component: {fileID: 541597939}
   m_Layer: 5
   m_Name: Button 4
   m_TagString: Untagged
@@ -2759,6 +2787,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2124845637}
         m_TargetAssemblyTypeName: screenSwitchScript, Assembly-CSharp
         m_MethodName: Answer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 541597939}
+        m_TargetAssemblyTypeName: answerButtonScript, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2826,6 +2866,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541597934}
   m_CullTransparentMesh: 1
+--- !u!114 &541597939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541597934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f249140806334aca845d617940d147c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::answerButtonScript
+  buttonText: {fileID: 1902915287}
+  qm: {fileID: 1618657192}
 --- !u!1 &586787956
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3251,7 @@ GameObject:
   - component: {fileID: 777973158}
   - component: {fileID: 777973157}
   - component: {fileID: 777973159}
+  - component: {fileID: 777973160}
   m_Layer: 5
   m_Name: Button 3
   m_TagString: Untagged
@@ -3318,6 +3373,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 777973160}
+        m_TargetAssemblyTypeName: answerButtonScript, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &777973160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777973155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f249140806334aca845d617940d147c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::answerButtonScript
+  buttonText: {fileID: 1729870733}
+  qm: {fileID: 1618657192}
 --- !u!1 &851259897
 GameObject:
   m_ObjectHideFlags: 0
@@ -4067,7 +4148,7 @@ Transform:
   m_GameObject: {fileID: 1144630455}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21, y: -2, z: 0}
+  m_LocalPosition: {x: 21, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4287,7 +4368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -261, y: 163}
+  m_AnchoredPosition: {x: -261, y: 150}
   m_SizeDelta: {x: 500, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442753489
@@ -4401,6 +4482,7 @@ GameObject:
   - component: {fileID: 1503326281}
   - component: {fileID: 1503326280}
   - component: {fileID: 1503326282}
+  - component: {fileID: 1503326283}
   m_Layer: 5
   m_Name: Button 1
   m_TagString: Untagged
@@ -4522,6 +4604,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1503326283}
+        m_TargetAssemblyTypeName: answerButtonScript, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1503326283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503326278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f249140806334aca845d617940d147c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::answerButtonScript
+  buttonText: {fileID: 142093967}
+  qm: {fileID: 1618657192}
 --- !u!1 &1549175451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,7 +4720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.5, y: -82}
+  m_AnchoredPosition: {x: 412.5, y: -95}
   m_SizeDelta: {x: 500, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1571915042
@@ -4749,6 +4857,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::questionManager
   questionText: {fileID: 2049395243}
+  factText: {fileID: 1571915042}
+  answerButtons:
+  - {fileID: 1503326283}
+  - {fileID: 527512078}
+  - {fileID: 777973160}
+  - {fileID: 541597939}
 --- !u!4 &1618657193
 Transform:
   m_ObjectHideFlags: 0
@@ -5329,7 +5443,7 @@ Transform:
   m_GameObject: {fileID: 1793809675}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.75, y: 3.5, z: 0}
+  m_LocalPosition: {x: 12.75, y: 4, z: 0}
   m_LocalScale: {x: 12.75, y: 5.225, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6063,7 +6177,7 @@ Transform:
   m_GameObject: {fileID: 1991749337}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 0, z: 0}
+  m_LocalPosition: {x: 4.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
