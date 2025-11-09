@@ -10,18 +10,21 @@ public class timerScript : MonoBehaviour
     public float startingTime = 30f;
 
     [SerializeField] TMP_Text countdownText;
+    [SerializeField] private screenSwitchScript sm;
     void Start()
     {
         currentTime = startingTime;
     }
     void Update()
     {
-        currentTime =- 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
+        currentTime -= 1 * Time.deltaTime;
+        countdownText.text = currentTime.ToString("Time Remaining: 0");
 
         if (currentTime <= 0)
         {
             currentTime = 0;
+            sm.Answer();
+            enabled = false;
            
         }
     }
