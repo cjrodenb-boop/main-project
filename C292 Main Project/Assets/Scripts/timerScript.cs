@@ -7,7 +7,7 @@ using TMPro;
 public class timerScript : MonoBehaviour
 {
     float currentTime;
-    public float startingTime = 30f;
+    public float startingTime = 15f;
 
     [SerializeField] TMP_Text countdownText;
     [SerializeField] private screenSwitchScript sm;
@@ -25,7 +25,13 @@ public class timerScript : MonoBehaviour
             currentTime = 0;
             sm.Answer();
             enabled = false;
-           
+
         }
+    }
+    
+    public void TimerReset()
+    {
+        currentTime = startingTime;
+        enabled = true;
     }
 }

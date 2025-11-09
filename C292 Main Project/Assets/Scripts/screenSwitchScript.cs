@@ -7,6 +7,7 @@ public class screenSwitchScript : MonoBehaviour
     [SerializeField] private GameObject answerScreen;
     [SerializeField] private questionManager qm;
     [SerializeField] private answersManager am;
+    [SerializeField] private timerScript t;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,6 +25,7 @@ public class screenSwitchScript : MonoBehaviour
         answerScreen.SetActive(false);
         qm.QuestionPicker();
         am.AnswerPicker(qm.CorrectAnswer);
+        t.TimerReset();
     }
 
     public void Answer()
