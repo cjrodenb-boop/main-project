@@ -103,14 +103,30 @@ public class questionManager : MonoBehaviour
 
     public void AnswerChosen(string selectedAnswer)
     {
+
+        foreach (answerButtonScript ab in answerButtons)
+        {
+            ab.GetComponent<Image>().color = Color.white;
+            ab.buttonText.fontStyle = FontStyles.Normal;
+        }
+
         foreach (answerButtonScript ab in answerButtons)
         {
             if (ab.buttonText.text == CorrectAnswer)
+            {
                 ab.GetComponent<Image>().color = new Color(0.6f, 1f, 0.6f);
-            else
-                ab.GetComponent<Image>().color = new Color(1f, 0.4f, 0.4f, 1f);
-                // note for later: the correct answer should always turn green,
-                // but wrong answer should only turn red if clicked. otherwise stay white
+
+            }
+
+            if (ab.buttonText.text == selectedAnswer)
+            {
+                ab.buttonText.fontStyle = FontStyles.Bold;
+                if (selectedAnswer != CorrectAnswer)
+                {
+                    ab.GetComponent<Image>().color = new Color(1f, 0.4f, 0.4f, 1f);
+                    
+                }
+            }
         } 
     }
 }
