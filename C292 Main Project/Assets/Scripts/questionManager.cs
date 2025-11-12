@@ -89,9 +89,13 @@ public class questionManager : MonoBehaviour
 
     public void QuestionPicker()
     {
-        foreach (var ab in answerButtons) 
+        foreach (var ab in answerButtons)
+        {
             ab.GetComponent<Image>().color = Color.white;
-
+            ab.buttonText.fontStyle = FontStyles.Normal;
+            
+        } 
+           
         int idx = Random.Range(0, questions.Count);
         questionText.text = questions[idx];
         factText.text = funFacts[idx];
