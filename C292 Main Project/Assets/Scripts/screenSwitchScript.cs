@@ -5,6 +5,7 @@ public class screenSwitchScript : MonoBehaviour
 
     [SerializeField] private GameObject questionScreen;
     [SerializeField] private GameObject answerScreen;
+    [SerializeField] private GameObject endScreen;
     [SerializeField] private questionManager qm;
     [SerializeField] private answersManager am;
     [SerializeField] private timerScript t;
@@ -15,6 +16,7 @@ public class screenSwitchScript : MonoBehaviour
     {
         questionScreen.SetActive(true);
         answerScreen.SetActive(false);
+        endScreen.SetActive(false);
         qm.QuestionPicker();
         am.AnswerPicker(qm.CorrectAnswer);
     }
@@ -32,5 +34,10 @@ public class screenSwitchScript : MonoBehaviour
     {
         questionScreen.SetActive(false);
         answerScreen.SetActive(true);
+    }
+
+    public void End()
+    {
+        questionScreen.SetActive(false);
     }
 }
