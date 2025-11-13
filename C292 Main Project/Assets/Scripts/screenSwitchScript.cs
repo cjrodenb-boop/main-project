@@ -58,6 +58,10 @@ public class screenSwitchScript : MonoBehaviour
 
     public void ResetGame()
     {
+        button1.SetActive(true);
+        button2.SetActive(true);
+        button3.SetActive(true);
+        button4.SetActive(true);
         qm.enabled = true;
         am.enabled = true;
         t.TimerReset();
@@ -67,6 +71,5 @@ public class screenSwitchScript : MonoBehaviour
         answerScreen.SetActive(false);
         qm.QuestionPicker();
         am.AnswerPicker(qm.CorrectAnswer);
-    
     }
 }
