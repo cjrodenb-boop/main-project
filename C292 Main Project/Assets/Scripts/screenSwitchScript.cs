@@ -55,4 +55,18 @@ public class screenSwitchScript : MonoBehaviour
         button3.SetActive(false);
         button4.SetActive(false);
     }
+
+    public void ResetGame()
+    {
+        qm.enabled = true;
+        am.enabled = true;
+        t.TimerReset();
+        qm.ResetQuestions();
+        endScreen.SetActive(false);
+        questionScreen.SetActive(true);
+        answerScreen.SetActive(false);
+        qm.QuestionPicker();
+        am.AnswerPicker(qm.CorrectAnswer);
+    
+    }
 }

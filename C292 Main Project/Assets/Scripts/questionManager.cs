@@ -150,4 +150,9 @@ public class questionManager : MonoBehaviour
             }
         } 
     }
+
+    public void ResetQuestions()
+    {
+        
+    }
 }
