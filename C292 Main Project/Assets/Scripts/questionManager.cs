@@ -8,7 +8,18 @@ public class questionManager : MonoBehaviour
 
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private TMP_Text factText;
+    [SerializeField] private screenSwitchScript ss;
+
     [SerializeField] private List<answerButtonScript> answerButtons;
+
+    
+
+
+
+
+    private int counter = 0;
+    private const int totalQuestions = 13; // i looked up "const"
+
 
     private List<string> questions = new List<string>()
     {
@@ -103,6 +114,12 @@ public class questionManager : MonoBehaviour
         questions.RemoveAt(idx);
         correctAnswers.RemoveAt(idx);
         funFacts.RemoveAt(idx);
+
+        counter++;
+        if (counter >= totalQuestions)
+        {
+            ss.End();
+        }
     }
 
     public void AnswerChosen(string selectedAnswer)

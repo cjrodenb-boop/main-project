@@ -10,6 +10,11 @@ public class screenSwitchScript : MonoBehaviour
     [SerializeField] private answersManager am;
     [SerializeField] private timerScript t;
 
+    [SerializeField] private GameObject button1;
+    [SerializeField] private GameObject button2;
+    [SerializeField] private GameObject button3;
+    [SerializeField] private GameObject button4;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +24,10 @@ public class screenSwitchScript : MonoBehaviour
         endScreen.SetActive(false);
         qm.QuestionPicker();
         am.AnswerPicker(qm.CorrectAnswer);
+        button1.SetActive(true);
+        button2.SetActive(true);
+        button3.SetActive(true);
+        button4.SetActive(true);
     }
 
     public void Question()
@@ -39,5 +48,11 @@ public class screenSwitchScript : MonoBehaviour
     public void End()
     {
         questionScreen.SetActive(false);
+        answerScreen.SetActive(false);
+        endScreen.SetActive(true);
+        button1.SetActive(false);
+        button2.SetActive(false);
+        button3.SetActive(false);
+        button4.SetActive(false);
     }
 }
