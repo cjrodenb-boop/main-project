@@ -2382,6 +2382,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &346570762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346570764}
+  - component: {fileID: 346570763}
+  m_Layer: 0
+  m_Name: Correct Count Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &346570763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346570762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1406b96d08c9f453fbdd2dd3976973d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::correctCountScript
+  correctText: {fileID: 836081036}
+--- !u!4 &346570764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346570762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.26687, y: 2.99534, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &368509738
 GameObject:
   m_ObjectHideFlags: 0
@@ -4080,7 +4125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b4572d3ea2c41f5bbf47041674d125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::answersManager
-  s: {fileID: 1821961819}
   qm: {fileID: 1618657192}
   buttons:
   - {fileID: 1503326282}
@@ -5639,6 +5683,7 @@ MonoBehaviour:
   am: {fileID: 631075543}
   t: {fileID: 346104033}
   s: {fileID: 1821961819}
+  cs: {fileID: 346570763}
   button1: {fileID: 1503326278}
   button2: {fileID: 527512073}
   button3: {fileID: 777973155}
@@ -5825,7 +5870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110, y: 12}
+  m_AnchoredPosition: {x: 95, y: 12}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321461058
@@ -6874,6 +6919,8 @@ MonoBehaviour:
   questionText: {fileID: 2049395243}
   factText: {fileID: 1571915042}
   ss: {fileID: 1244658258}
+  s: {fileID: 1821961819}
+  cs: {fileID: 346570763}
   answerButtons:
   - {fileID: 1503326283}
   - {fileID: 527512078}
@@ -7732,7 +7779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa42302f69f834ea49540a2ae5e53f3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scoreScript
-  scoreText: {fileID: 535749306}
+  scoreText: {fileID: 1321461058}
 --- !u!4 &1821961820
 Transform:
   m_ObjectHideFlags: 0
@@ -9245,6 +9292,7 @@ MonoBehaviour:
   am: {fileID: 631075543}
   t: {fileID: 346104033}
   s: {fileID: 0}
+  cs: {fileID: 0}
   button1: {fileID: 1503326278}
   button2: {fileID: 527512073}
   button3: {fileID: 777973155}
@@ -9353,3 +9401,4 @@ SceneRoots:
   - {fileID: 346104034}
   - {fileID: 1244658259}
   - {fileID: 1821961820}
+  - {fileID: 346570764}

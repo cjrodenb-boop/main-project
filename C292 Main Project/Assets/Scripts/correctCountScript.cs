@@ -21,11 +21,11 @@ public class correctCountScript : MonoBehaviour
 
     public void ResetCount()
     {
-        score = 0;
+        correct = 0;
     }
 
     public void UpdateCount()
     {
-        correctText.text = count.ToString();
+        correctText.text = correct.ToString();
     }
 }
