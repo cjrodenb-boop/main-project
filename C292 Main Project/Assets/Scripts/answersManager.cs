@@ -5,6 +5,9 @@ using TMPro;
 
 public class answersManager : MonoBehaviour
 {
+    [SerializeField] private scoreScript s;
+    [SerializeField] private questionManager qm;
+
     [SerializeField] private Button[] buttons;
 
     private string[] answers = new string[]
@@ -15,9 +18,6 @@ public class answersManager : MonoBehaviour
         "Austrailia", "Kiribati"
     };
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start() {}
-    
     public void AnswerPicker(string correctAnswer)
     {
         List<string> wrong = new List<string>(answers);

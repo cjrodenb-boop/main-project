@@ -9,6 +9,7 @@ public class screenSwitchScript : MonoBehaviour
     [SerializeField] private questionManager qm;
     [SerializeField] private answersManager am;
     [SerializeField] private timerScript t;
+    [SerializeField] private scoreScript s;
 
     [SerializeField] private GameObject button1;
     [SerializeField] private GameObject button2;
@@ -66,6 +67,7 @@ public class screenSwitchScript : MonoBehaviour
         am.enabled = true;
         t.TimerReset();
         qm.ResetQuestions();
+        s.ResetScore();
         endScreen.SetActive(false);
         questionScreen.SetActive(true);
         answerScreen.SetActive(false);
