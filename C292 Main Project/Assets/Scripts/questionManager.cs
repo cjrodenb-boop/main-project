@@ -9,6 +9,7 @@ public class questionManager : MonoBehaviour
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private TMP_Text factText;
     [SerializeField] private screenSwitchScript ss;
+    [SerializeField] private scoreScript s;
 
     [SerializeField] private List<answerButtonScript> answerButtons;
 
@@ -132,7 +133,7 @@ public class questionManager : MonoBehaviour
             if (ab.buttonText.text == CorrectAnswer)
             {
                 ab.GetComponent<Image>().color = new Color(0.6f, 1f, 0.6f);
-
+               
             }
 
             if (ab.buttonText.text == selectedAnswer)
@@ -143,6 +144,13 @@ public class questionManager : MonoBehaviour
                     ab.GetComponent<Image>().color = new Color(1f, 0.4f, 0.4f, 1f);
                     
                 }
+            }
+
+            if (ab.buttonText.text == CorrectAnswer && selectedAnswer == CorrectAnswer)
+            {
+                s.CorrectScore();
+                s.UpdateScore();
+        
             }
         } 
     }

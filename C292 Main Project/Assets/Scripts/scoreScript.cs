@@ -10,6 +10,13 @@ public class scoreScript : MonoBehaviour
     private int score = 0;
     [SerializeField] TMP_Text scoreText;
 
+    private void Start()
+    {
+        UpdateScore();
+    }
+
+
+
     public void CorrectScore()
     {
         score += 50;
@@ -20,7 +27,7 @@ public class scoreScript : MonoBehaviour
         score = 0;
     }
 
-    private void OnEnable()
+    public void UpdateScore()
     {
         scoreText.text = score.ToString();
     }
