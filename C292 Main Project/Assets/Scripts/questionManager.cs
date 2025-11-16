@@ -10,6 +10,7 @@ public class questionManager : MonoBehaviour
     [SerializeField] private TMP_Text factText;
     [SerializeField] private screenSwitchScript ss;
     [SerializeField] private scoreScript s;
+    [SerializeField] private correctCountScript cs;
 
     [SerializeField] private List<answerButtonScript> answerButtons;
 
@@ -150,7 +151,8 @@ public class questionManager : MonoBehaviour
             {
                 s.CorrectScore();
                 s.UpdateScore();
-        
+                cs.AddCount();
+                cs.UpdateCount();
             }
         } 
     }

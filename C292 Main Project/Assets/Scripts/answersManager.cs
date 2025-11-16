@@ -5,7 +5,7 @@ using TMPro;
 
 public class answersManager : MonoBehaviour
 {
-    [SerializeField] private scoreScript s;
+
     [SerializeField] private questionManager qm;
 
     [SerializeField] private Button[] buttons;

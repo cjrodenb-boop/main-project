@@ -15,11 +15,9 @@ public class scoreScript : MonoBehaviour
         UpdateScore();
     }
 
-
-
     public void CorrectScore()
     {
-        score += 50;
+        score += 50; // this is just to make sure it works. moving forward, i want to make the way to score is calculated more complicated 
     }
 
     public void ResetScore()
