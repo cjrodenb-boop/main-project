@@ -47,7 +47,7 @@ public class screenSwitchScript : MonoBehaviour
 
     public void End()
     {
-        questionScreen.SetActive(false);
+        questionScreen.SetActive(false); // found bug with answer and end screen
         answerScreen.SetActive(false);
         endScreen.SetActive(true);
         button1.SetActive(false);
