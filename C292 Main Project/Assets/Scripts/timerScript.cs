@@ -11,6 +11,7 @@ public class timerScript : MonoBehaviour
 
     [SerializeField] TMP_Text countdownText;
     [SerializeField] private screenSwitchScript sm;
+    [SerializeField] private GameObject endScreen;
     void Start()
     {
         currentTime = startingTime;
@@ -22,10 +23,14 @@ public class timerScript : MonoBehaviour
 
         if (currentTime <= 0)
         {
+
             currentTime = 0;
-            sm.Answer();
             enabled = false;
 
+            if (!endScreen.activeSelf) // i looked up .activeSelf
+            {
+                sm.Answer();
+            }
         }
     }
     
