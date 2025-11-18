@@ -8,7 +8,10 @@ public class questionManager : MonoBehaviour
 
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private TMP_Text factText;
+    [SerializeField] private AudioSource correctSound;
+    [SerializeField] private AudioSource wrongSound;
     [SerializeField] private screenSwitchScript ss;
+
     [SerializeField] private scoreScript s;
     [SerializeField] private correctCountScript cs;
 
@@ -142,13 +145,14 @@ public class questionManager : MonoBehaviour
                 ab.buttonText.fontStyle = FontStyles.Bold;
                 if (selectedAnswer != CorrectAnswer)
                 {
+                    wrongSound.Play();
                     ab.GetComponent<Image>().color = new Color(1f, 0.4f, 0.4f, 1f);
-                    
                 }
             }
 
             if (ab.buttonText.text == CorrectAnswer && selectedAnswer == CorrectAnswer)
             {
+                correctSound.Play();
                 s.CorrectScore();
                 s.UpdateScore();
                 cs.AddCount();
