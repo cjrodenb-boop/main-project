@@ -6,6 +6,7 @@ public class screenSwitchScript : MonoBehaviour
     [SerializeField] private GameObject questionScreen;
     [SerializeField] private GameObject answerScreen;
     [SerializeField] private GameObject endScreen;
+    [SerializeField] private AudioSource endSong;
     [SerializeField] private questionManager qm;
     [SerializeField] private answersManager am;
     [SerializeField] private timerScript t;
@@ -49,6 +50,7 @@ public class screenSwitchScript : MonoBehaviour
 
     public void End()
     {
+        endSong.Play();
         questionScreen.SetActive(false); // found bug with answer and end screen
         answerScreen.SetActive(false);
         endScreen.SetActive(true);
@@ -60,6 +62,7 @@ public class screenSwitchScript : MonoBehaviour
 
     public void ResetGame()
     {
+        endSong.Stop();
         button1.SetActive(true);
         button2.SetActive(true);
         button3.SetActive(true);
