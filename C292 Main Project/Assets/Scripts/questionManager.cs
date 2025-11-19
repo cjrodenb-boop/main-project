@@ -14,8 +14,10 @@ public class questionManager : MonoBehaviour
 
     [SerializeField] private scoreScript s;
     [SerializeField] private correctCountScript cs;
+    [SerializeField] private streakScript str;
 
     [SerializeField] private List<answerButtonScript> answerButtons;
+
 
 
     private int counter = 0;
@@ -146,6 +148,8 @@ public class questionManager : MonoBehaviour
                 if (selectedAnswer != CorrectAnswer)
                 {
                     wrongSound.Play();
+                    str.ResetStreak();
+                    str.UpdateStreak();
                     ab.GetComponent<Image>().color = new Color(1f, 0.4f, 0.4f, 1f);
                 }
             }
@@ -153,6 +157,8 @@ public class questionManager : MonoBehaviour
             if (ab.buttonText.text == CorrectAnswer && selectedAnswer == CorrectAnswer)
             {
                 correctSound.Play();
+                str.IncreaseStreak();
+                str.UpdateStreak();
                 s.CorrectScore();
                 s.UpdateScore();
                 cs.AddCount();

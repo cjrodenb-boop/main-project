@@ -2367,6 +2367,7 @@ MonoBehaviour:
   startingTime: 30
   countdownText: {fileID: 114495415}
   sm: {fileID: 1244658258}
+  endScreen: {fileID: 1076074754}
 --- !u!4 &346104034
 Transform:
   m_ObjectHideFlags: 0

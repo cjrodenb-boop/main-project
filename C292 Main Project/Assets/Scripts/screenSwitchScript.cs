@@ -12,6 +12,7 @@ public class screenSwitchScript : MonoBehaviour
     [SerializeField] private timerScript t;
     [SerializeField] private scoreScript s;
     [SerializeField] private correctCountScript cs;
+    [SerializeField] private streakScript ss;
 
     [SerializeField] private GameObject button1;
     [SerializeField] private GameObject button2;
@@ -63,6 +64,7 @@ public class screenSwitchScript : MonoBehaviour
     public void ResetGame()
     {
         endSong.Stop();
+        ss.ResetStreak();
         button1.SetActive(true);
         button2.SetActive(true);
         button3.SetActive(true);
