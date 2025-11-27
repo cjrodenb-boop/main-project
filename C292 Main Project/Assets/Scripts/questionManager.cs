@@ -18,9 +18,6 @@ public class questionManager : MonoBehaviour
 
     [SerializeField] private List<answerButtonScript> answerButtons;
 
-    [SerializeField] private List<GameObject> questionImages;
-
-
 
     private int counter = 0;
     private const int totalQuestions = 8; // i looked up "const"
@@ -99,7 +96,7 @@ public class questionManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        QuestionPicker();
+        //QuestionPicker();
     }
 
 
@@ -111,20 +108,13 @@ public class questionManager : MonoBehaviour
             ab.buttonText.fontStyle = FontStyles.Normal;
         } 
 
-        // foreach (var image in questionImages)
-        // {
-        //     image.gameObject.SetActive(false);
-        // }
-           
         int idx = Random.Range(0, questions.Count);
-        //questionImages[idx].SetActive(true);
         questionText.text = questions[idx];
         factText.text = funFacts[idx];
         CorrectAnswer = correctAnswers[idx];
         questions.RemoveAt(idx);
         correctAnswers.RemoveAt(idx);
         funFacts.RemoveAt(idx);
-        //questionImages.RemoveAt(idx);
 
         counter++;
         if (counter >= totalQuestions)
