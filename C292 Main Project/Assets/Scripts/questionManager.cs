@@ -18,6 +18,8 @@ public class questionManager : MonoBehaviour
 
     [SerializeField] private List<answerButtonScript> answerButtons;
 
+    [SerializeField] private List<GameObject> questionImages;
+
 
 
     private int counter = 0;
@@ -31,7 +33,7 @@ public class questionManager : MonoBehaviour
         "Which country is considered the origin of coffee?",
         "Which country is known for cocoa production?",
         "Which country is the most populous in the world?",
-        "Which country’s flag is shown below?",
+        "Where is the Ganges River located?",
         "Which country consists of four main islands and is famous for Mount Fuji?",
         "Which country has the nickname “Land of Smiles”?",
         "Which country consists of more than 7,000 islands?",
