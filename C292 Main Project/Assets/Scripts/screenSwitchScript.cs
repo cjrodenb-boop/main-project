@@ -25,16 +25,15 @@ public class screenSwitchScript : MonoBehaviour
     {
         questionScreen.SetActive(true);
         ss.ResetStreak();
-
         ss.UpdateStreak();
         answerScreen.SetActive(false);
         endScreen.SetActive(false);
-        qm.QuestionPicker();
-        am.AnswerPicker(qm.CorrectAnswer);
-        button1.SetActive(true);
+         button1.SetActive(true);
         button2.SetActive(true);
         button3.SetActive(true);
         button4.SetActive(true);
+        qm.QuestionPicker();
+        am.AnswerPicker(qm.CorrectAnswer);
     }
 
     public void Question()

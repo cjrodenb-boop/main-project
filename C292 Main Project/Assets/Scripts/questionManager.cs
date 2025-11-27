@@ -109,16 +109,22 @@ public class questionManager : MonoBehaviour
         {
             ab.GetComponent<Image>().color = Color.white;
             ab.buttonText.fontStyle = FontStyles.Normal;
-            
         } 
+
+        // foreach (var image in questionImages)
+        // {
+        //     image.gameObject.SetActive(false);
+        // }
            
         int idx = Random.Range(0, questions.Count);
+        //questionImages[idx].SetActive(true);
         questionText.text = questions[idx];
         factText.text = funFacts[idx];
         CorrectAnswer = correctAnswers[idx];
         questions.RemoveAt(idx);
         correctAnswers.RemoveAt(idx);
         funFacts.RemoveAt(idx);
+        //questionImages.RemoveAt(idx);
 
         counter++;
         if (counter >= totalQuestions)
@@ -182,7 +188,7 @@ public class questionManager : MonoBehaviour
         "Which country is considered the origin of coffee?",
         "Which country is known for cocoa production?",
         "Which country is the most populous in the world?",
-        "Which country’s flag is shown below?",
+        "Where is the Ganges River located?",
         "Which country consists of four main islands and is famous for Mount Fuji?",
         "Which country has the nickname “Land of Smiles”?",
         "Which country consists of more than 7,000 islands?",
