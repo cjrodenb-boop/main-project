@@ -24,6 +24,9 @@ public class screenSwitchScript : MonoBehaviour
     void Start()
     {
         questionScreen.SetActive(true);
+        ss.ResetStreak();
+
+        ss.UpdateStreak();
         answerScreen.SetActive(false);
         endScreen.SetActive(false);
         qm.QuestionPicker();
@@ -65,6 +68,7 @@ public class screenSwitchScript : MonoBehaviour
     {
         endSong.Stop();
         ss.ResetStreak();
+        ss.UpdateStreak();
         button1.SetActive(true);
         button2.SetActive(true);
         button3.SetActive(true);
