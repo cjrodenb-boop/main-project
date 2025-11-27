@@ -7,7 +7,7 @@ public class screenSwitchScript : MonoBehaviour
     [SerializeField] private GameObject answerScreen;
     [SerializeField] private GameObject endScreen;
     [SerializeField] private GameObject playScreen;
-    [SerializeField] private AudioSource endSong;
+    [SerializeField] private AudioSource funSong;
     [SerializeField] private questionManager qm;
     [SerializeField] private answersManager am;
     [SerializeField] private timerScript t;
@@ -24,11 +24,12 @@ public class screenSwitchScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        funSong.Play();
         button1.SetActive(false);
         button2.SetActive(false);
         button3.SetActive(false);
         button4.SetActive(false);
-        playScreen.SetActive(false);
+        playScreen.SetActive(true);
         questionScreen.SetActive(false);
         answerScreen.SetActive(false);
         endScreen.SetActive(false);
@@ -37,6 +38,7 @@ public class screenSwitchScript : MonoBehaviour
 
     public void StartGame()
     {
+        funSong.Stop();
         playScreen.SetActive(false);
         questionScreen.SetActive(true);
         ss.ResetStreak();
@@ -68,7 +70,7 @@ public class screenSwitchScript : MonoBehaviour
 
     public void End()
     {
-        endSong.Play();
+        funSong.Play();
         questionScreen.SetActive(false); // found bug with answer and end screen
         answerScreen.SetActive(false);
         endScreen.SetActive(true);
@@ -80,23 +82,17 @@ public class screenSwitchScript : MonoBehaviour
 
     public void ResetGame()
     {
-        endSong.Stop();
         ss.ResetStreak();
         ss.UpdateStreak();
-        button1.SetActive(true);
-        button2.SetActive(true);
-        button3.SetActive(true);
-        button4.SetActive(true);
         qm.enabled = true;
         am.enabled = true;
         t.TimerReset();
         qm.ResetQuestions();
         s.ResetScore();
         cs.ResetCount();
+        playScreen.SetActive(true);
         endScreen.SetActive(false);
-        questionScreen.SetActive(true);
+        questionScreen.SetActive(false);
         answerScreen.SetActive(false);
-        qm.QuestionPicker();
-        am.AnswerPicker(qm.CorrectAnswer);
     }
 }
