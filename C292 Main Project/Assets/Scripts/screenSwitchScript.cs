@@ -6,6 +6,7 @@ public class screenSwitchScript : MonoBehaviour
     [SerializeField] private GameObject questionScreen;
     [SerializeField] private GameObject answerScreen;
     [SerializeField] private GameObject endScreen;
+    [SerializeField] private GameObject playScreen;
     [SerializeField] private AudioSource endSong;
     [SerializeField] private questionManager qm;
     [SerializeField] private answersManager am;
@@ -23,17 +24,31 @@ public class screenSwitchScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        button1.SetActive(false);
+        button2.SetActive(false);
+        button3.SetActive(false);
+        button4.SetActive(false);
+        playScreen.SetActive(false);
+        questionScreen.SetActive(false);
+        answerScreen.SetActive(false);
+        endScreen.SetActive(false);
+    }
+
+
+    public void StartGame()
+    {
+        playScreen.SetActive(false);
         questionScreen.SetActive(true);
         ss.ResetStreak();
         ss.UpdateStreak();
         answerScreen.SetActive(false);
         endScreen.SetActive(false);
-         button1.SetActive(true);
+        button1.SetActive(true);
         button2.SetActive(true);
         button3.SetActive(true);
         button4.SetActive(true);
         qm.QuestionPicker();
-        am.AnswerPicker(qm.CorrectAnswer);
+        am.AnswerPicker(qm.CorrectAnswer); 
     }
 
     public void Question()
