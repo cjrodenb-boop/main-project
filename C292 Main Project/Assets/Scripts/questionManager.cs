@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class questionManager : MonoBehaviour
 {
 
+
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private TMP_Text factText;
     [SerializeField] private AudioSource correctSound;
@@ -21,6 +22,7 @@ public class questionManager : MonoBehaviour
 
     private int counter = 0;
     private const int totalQuestions = 8; // i looked up "const"
+    private bool answered = false;
 
 
     private List<string> questions = new List<string>()
@@ -102,6 +104,8 @@ public class questionManager : MonoBehaviour
 
     public void QuestionPicker()
     {
+        answered = false;
+
         foreach (var ab in answerButtons)
         {
             ab.GetComponent<Image>().color = Color.white;
@@ -125,6 +129,12 @@ public class questionManager : MonoBehaviour
 
     public void AnswerChosen(string selectedAnswer)
     {
+        if (answered)
+        {
+            return;
+        }
+
+        answered = true;
 
         foreach (answerButtonScript ab in answerButtons)
         {
