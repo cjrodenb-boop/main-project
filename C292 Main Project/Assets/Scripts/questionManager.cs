@@ -232,7 +232,7 @@ public class questionManager : MonoBehaviour
         "Spain is home to the world's oldest restaurant, Sobrino de Botín.",
         "The Pol'and'Rock Festival is the largest free open-air music festival in the world.",
         "Norway is known for having the world's longest road tunnel.",
-        "Albanian's shake their head for yes and nod for no.",
+        "Albanians shake their heads for yes and nod for no.",
         "Austrailia has more kangaroos than people.",
         "Kiribati is the only country that lies in all four hemispheres."
     };
