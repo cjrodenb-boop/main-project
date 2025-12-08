@@ -18,6 +18,7 @@ public class questionManager : MonoBehaviour
     [SerializeField] private streakScript str;
 
     [SerializeField] private List<answerButtonScript> answerButtons;
+    [SerializeField] private List<GameObject> flags;
 
 
     private int counter = 0;
@@ -99,6 +100,12 @@ public class questionManager : MonoBehaviour
     void Start()
     {
      
+    }
+
+    private void ShowFlag(int index)
+    {
+        
+        
     }
 
 
