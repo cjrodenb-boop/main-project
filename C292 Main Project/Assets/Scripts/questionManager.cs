@@ -175,6 +175,22 @@ public class questionManager : MonoBehaviour
         } 
     }
 
+    public void ForceAnswer()
+    {
+        answered = true;
+        foreach (answerButtonScript ab in answerButtons)
+        {
+            ab.GetComponent<Image>().color = Color.white;
+            ab.buttonText.fontStyle = FontStyles.Normal;
+
+            if (ab.buttonText.text == CorrectAnswer)
+            {
+                ab.GetComponent<Image>().color = new Color(0.6f, 1f, 0.6f);
+                ab.buttonText.fontStyle = FontStyles.Bold;
+            }  
+        }
+    }
+
     public void ResetQuestions()
     {
         counter = 0;
