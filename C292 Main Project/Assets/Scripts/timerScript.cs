@@ -27,12 +27,18 @@ public class timerScript : MonoBehaviour
 
             currentTime = 0;
             enabled = false;
+            qm.ForceAnswer(); 
 
             if (!endScreen.activeSelf) // i looked up .activeSelf
             {
                 sm.Answer();
             }
         }
+    }
+
+    public void StartTimer()
+    {
+        
     }
     
     public void TimerReset()
