@@ -67,6 +67,7 @@ public class screenSwitchScript : MonoBehaviour
     {
         questionScreen.SetActive(false);
         answerScreen.SetActive(true);
+        t.StopTimer();
     }
 
     public void End()
@@ -79,6 +80,7 @@ public class screenSwitchScript : MonoBehaviour
         button2.SetActive(false);
         button3.SetActive(false);
         button4.SetActive(false);
+        t.StopTimer();
     }
 
     public void ResetGame()

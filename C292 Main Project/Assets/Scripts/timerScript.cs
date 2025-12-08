@@ -35,6 +35,7 @@ public class timerScript : MonoBehaviour
         {
 
             currentTime = 0;
+            running = false; 
             enabled = false;
             qm.ForceAnswer(); 
 
@@ -52,10 +53,17 @@ public class timerScript : MonoBehaviour
         enabled = true;
     
     }
+
+    public void StopTimer()
+    {
+        running = false;
+        enabled = false;
+    }
     
     public void TimerReset()
     {
         currentTime = startingTime;
+        running = true; 
         enabled = true;
     }
 }

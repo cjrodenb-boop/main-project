@@ -2512,10 +2512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fe0ca087f41420fb0b5614f5060297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::timerScript
-  startingTime: 30
+  startingTime: 15
   countdownText: {fileID: 114495415}
   sm: {fileID: 1244658258}
   endScreen: {fileID: 1076074754}
+  qm: {fileID: 1618657192}
 --- !u!4 &346104034
 Transform:
   m_ObjectHideFlags: 0
@@ -6273,7 +6274,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 938470346616453969, guid: 746237cb15bdc4af6be313851b89a5df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
