@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using System.Collections;
 
 public class questionManager : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class questionManager : MonoBehaviour
     private int counter = 0;
     private const int totalQuestions = 8; // i looked up "const"
     private bool answered = false;
+    private int sortingLayerIndex = 10000;
 
 
     private List<string> questions = new List<string>()
@@ -99,17 +102,20 @@ public class questionManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-     
+        Debug.Log("Questions:" + questions.Count);
     }
 
     private void ShowFlag(int index)
     {
+        sortingLayerIndex++;
+
         foreach (var flag in flags)
         {
             flag.SetActive(false);
-            flags[index].SetActive(true);
         }
-
+        flags[index].SetActive(true);
+        flags[index].GetComponent<SpriteRenderer>().sortingOrder = sortingLayerIndex;
+        flags.RemoveAt(index);
     }
 
 
@@ -122,7 +128,6 @@ public class questionManager : MonoBehaviour
             ab.GetComponent<Image>().color = Color.white;
             ab.buttonText.fontStyle = FontStyles.Normal;
         } 
-
         int idx = Random.Range(0, questions.Count);
         questionText.text = questions[idx];
         factText.text = funFacts[idx];
@@ -131,6 +136,9 @@ public class questionManager : MonoBehaviour
         questions.RemoveAt(idx);
         correctAnswers.RemoveAt(idx);
         funFacts.RemoveAt(idx);
+        // flags.RemoveAt(idx);
+
+        //
 
         counter++;
         if (counter >= totalQuestions)
