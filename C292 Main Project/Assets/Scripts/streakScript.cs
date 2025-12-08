@@ -6,7 +6,8 @@ using TMPro;
 
 public class streakScript : MonoBehaviour
 {
-    private int streak = 0;
+    public int Streak => streak;
+    public int streak = 0;
     [SerializeField] TMP_Text streakText;
 
 

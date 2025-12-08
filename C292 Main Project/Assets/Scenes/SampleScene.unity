@@ -2513,6 +2513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fe0ca087f41420fb0b5614f5060297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::timerScript
+  currentTime: 0
   startingTime: 15
   countdownText: {fileID: 114495415}
   sm: {fileID: 1244658258}
@@ -3103,6 +3104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d13755bad5b491e9fa89163fa8de3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::streakScript
+  streak: 0
   streakText: {fileID: 916473352}
 --- !u!4 &452369650
 Transform:
@@ -9603,6 +9605,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scoreScript
   scoreText: {fileID: 1321461058}
+  t: {fileID: 346104033}
+  s: {fileID: 1821961819}
+  ss: {fileID: 452369649}
 --- !u!4 &1821961820
 Transform:
   m_ObjectHideFlags: 0

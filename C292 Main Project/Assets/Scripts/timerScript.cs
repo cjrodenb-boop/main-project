@@ -6,7 +6,8 @@ using TMPro;
 
 public class timerScript : MonoBehaviour
 {
-    float currentTime;
+    public float CurrentTime => currentTime;
+    public float currentTime;
     public float startingTime = 15f;
 
     [SerializeField] TMP_Text countdownText;

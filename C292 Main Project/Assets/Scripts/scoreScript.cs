@@ -9,6 +9,9 @@ public class scoreScript : MonoBehaviour
 {
     private int score = 0;
     [SerializeField] TMP_Text scoreText;
+    [SerializeField] timerScript t;
+    [SerializeField] scoreScript s;
+    [SerializeField] streakScript ss;
 
     private void Start()
     {
@@ -17,7 +20,28 @@ public class scoreScript : MonoBehaviour
 
     public void CorrectScore()
     {
-        score += 50; // this is just to make sure it works. moving forward, i want to make the way to score is calculated more complicated 
+        int streak = ss.Streak;
+        float timeLeft = t.CurrentTime;
+
+        if (streak > 1)
+        {
+           score += streak * 50;
+        }
+
+        if (timeLeft < 15 && timeLeft > 11)
+        {
+            score += 30;
+        }
+        else if (timeLeft < 12 && timeLeft > 8)
+        {
+            score += 20;
+        }
+        else if (timeLeft < 11 && timeLeft > 7)
+        {
+            score += 10;
+        }
+
+        score += 50; 
     }
 
     public void ResetScore()
