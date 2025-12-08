@@ -104,8 +104,12 @@ public class questionManager : MonoBehaviour
 
     private void ShowFlag(int index)
     {
-        
-        
+        foreach (var flag in flags)
+        {
+            flag.SetActive(false);
+            flags[index].SetActive(true);
+        }
+
     }
 
 
@@ -123,6 +127,7 @@ public class questionManager : MonoBehaviour
         questionText.text = questions[idx];
         factText.text = funFacts[idx];
         CorrectAnswer = correctAnswers[idx];
+        ShowFlag(idx);
         questions.RemoveAt(idx);
         correctAnswers.RemoveAt(idx);
         funFacts.RemoveAt(idx);
