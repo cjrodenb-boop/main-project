@@ -51,6 +51,7 @@ public class screenSwitchScript : MonoBehaviour
         button4.SetActive(true);
         qm.QuestionPicker();
         am.AnswerPicker(qm.CorrectAnswer); 
+        t.StartTimer();
     }
 
     public void Question()
