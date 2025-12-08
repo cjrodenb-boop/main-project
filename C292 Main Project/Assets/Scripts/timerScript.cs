@@ -12,6 +12,7 @@ public class timerScript : MonoBehaviour
     [SerializeField] TMP_Text countdownText;
     [SerializeField] private screenSwitchScript sm;
     [SerializeField] private GameObject endScreen;
+    [SerializeField] private questionManager qm;
     void Start()
     {
         currentTime = startingTime;
