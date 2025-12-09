@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Collections;
+using UnityEngine.Rendering.Universal.Internal;
 
 public class questionManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class questionManager : MonoBehaviour
     [SerializeField] private streakScript str;
 
     [SerializeField] private List<answerButtonScript> answerButtons;
+    [SerializeField] private List<GameObject> ogFlags;
     [SerializeField] private List<GameObject> flags;
 
 
@@ -97,12 +99,9 @@ public class questionManager : MonoBehaviour
 
     public string CorrectAnswer { get; private set; }
 
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("Questions:" + questions.Count);
+        ogFlags = new List<GameObject>(flags);
     }
 
     private void ShowFlag(int index)
@@ -136,10 +135,7 @@ public class questionManager : MonoBehaviour
         questions.RemoveAt(idx);
         correctAnswers.RemoveAt(idx);
         funFacts.RemoveAt(idx);
-        // flags.RemoveAt(idx);
-
-        //
-
+     
         counter++;
         if (counter >= totalQuestions)
         {
@@ -282,6 +278,8 @@ public class questionManager : MonoBehaviour
         "Austrailia has more kangaroos than people.",
         "Kiribati is the only country that lies in all four hemispheres."
     };
+
+    flags = new List<GameObject>(ogFlags);
 
     }
 }
