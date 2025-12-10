@@ -8713,6 +8713,32 @@ MonoBehaviour:
   - {fileID: 527512078}
   - {fileID: 777973160}
   - {fileID: 541597939}
+  ogFlags:
+  - {fileID: 971919446}
+  - {fileID: 1899322410}
+  - {fileID: 146447802}
+  - {fileID: 406053816}
+  - {fileID: 1624961679}
+  - {fileID: 1040396774}
+  - {fileID: 1701506342}
+  - {fileID: 841664718}
+  - {fileID: 2032985340}
+  - {fileID: 586787956}
+  - {fileID: 481278520}
+  - {fileID: 1801439830}
+  - {fileID: 1756047810}
+  - {fileID: 423916207}
+  - {fileID: 1982986239}
+  - {fileID: 2066928096}
+  - {fileID: 889956520}
+  - {fileID: 1959127396}
+  - {fileID: 851259897}
+  - {fileID: 16277561}
+  - {fileID: 1128014841}
+  - {fileID: 1403038666}
+  - {fileID: 178464041}
+  - {fileID: 122777021}
+  - {fileID: 140325931}
   flags:
   - {fileID: 971919446}
   - {fileID: 1899322410}
