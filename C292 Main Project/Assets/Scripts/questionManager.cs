@@ -12,6 +12,7 @@ public class questionManager : MonoBehaviour
 
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private TMP_Text factText;
+    [SerializeField] private TMP_Text points;
     [SerializeField] private AudioSource correctSound;
     [SerializeField] private AudioSource wrongSound;
     [SerializeField] private screenSwitchScript ss;
@@ -121,6 +122,7 @@ public class questionManager : MonoBehaviour
     public void QuestionPicker()
     {
         answered = false;
+        s.currScore = 0;
 
         foreach (var ab in answerButtons)
         {
@@ -172,15 +174,20 @@ public class questionManager : MonoBehaviour
                 if (selectedAnswer != CorrectAnswer)
                 {
                     wrongSound.Play();
+                    points.gameObject.SetActive(true);
+                    points.text= $"+{s.score} points";
                     str.ResetStreak();
                     str.UpdateStreak();
                     ab.GetComponent<Image>().color = new Color(1f, 0.4f, 0.4f, 1f);
+                   
                 }
             }
 
             if (ab.buttonText.text == CorrectAnswer && selectedAnswer == CorrectAnswer)
             {
                 correctSound.Play();
+                points.gameObject.SetActive(true);
+                points.text = $"+{s.score} points";
                 str.IncreaseStreak();
                 str.UpdateStreak();
                 s.CorrectScore();

@@ -7,7 +7,8 @@ using TMPro;
 
 public class scoreScript : MonoBehaviour
 {
-    private int score = 0;
+    public int score = 0;
+    public int currScore = 0;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] timerScript t;
     [SerializeField] scoreScript s;
