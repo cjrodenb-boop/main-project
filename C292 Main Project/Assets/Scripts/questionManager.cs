@@ -174,7 +174,6 @@ public class questionManager : MonoBehaviour
                 if (selectedAnswer != CorrectAnswer)
                 {
                     wrongSound.Play();
-                    //points.gameObject.SetActive(true);
                     points.text= $"+{s.currScore} points";
                     str.ResetStreak();
                     str.UpdateStreak();
@@ -186,7 +185,6 @@ public class questionManager : MonoBehaviour
             if (ab.buttonText.text == CorrectAnswer && selectedAnswer == CorrectAnswer)
             {
                 correctSound.Play();
-                //points.gameObject.SetActive(true);
                 str.IncreaseStreak();
                 str.UpdateStreak();
                 s.CorrectScore();
