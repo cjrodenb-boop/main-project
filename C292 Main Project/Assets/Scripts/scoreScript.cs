@@ -21,28 +21,30 @@ public class scoreScript : MonoBehaviour
 
     public void CorrectScore()
     {
+        currScore = 0;
         int streak = ss.Streak;
         float timeLeft = t.CurrentTime;
 
         if (streak > 1)
         {
-           score += streak * 50;
+           currScore += streak * 50;
         }
 
         if (timeLeft < 15 && timeLeft > 11)
         {
-            score += 30;
+            currScore += 30;
         }
         else if (timeLeft < 12 && timeLeft > 8)
         {
-            score += 20;
+            currScore += 20;
         }
         else if (timeLeft < 11 && timeLeft > 7)
         {
-            score += 10;
+            currScore += 10;
         }
 
-        score += 50; 
+        currScore += 50; 
+        score += currScore;
     }
 
     public void ResetScore()

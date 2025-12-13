@@ -174,8 +174,8 @@ public class questionManager : MonoBehaviour
                 if (selectedAnswer != CorrectAnswer)
                 {
                     wrongSound.Play();
-                    points.gameObject.SetActive(true);
-                    points.text= $"+{s.score} points";
+                    //points.gameObject.SetActive(true);
+                    points.text= $"+{s.currScore} points";
                     str.ResetStreak();
                     str.UpdateStreak();
                     ab.GetComponent<Image>().color = new Color(1f, 0.4f, 0.4f, 1f);
@@ -186,12 +186,12 @@ public class questionManager : MonoBehaviour
             if (ab.buttonText.text == CorrectAnswer && selectedAnswer == CorrectAnswer)
             {
                 correctSound.Play();
-                points.gameObject.SetActive(true);
-                points.text = $"+{s.score} points";
+                //points.gameObject.SetActive(true);
                 str.IncreaseStreak();
                 str.UpdateStreak();
                 s.CorrectScore();
                 s.UpdateScore();
+                points.text = $"+{s.currScore} points";
                 cs.AddCount();
                 cs.UpdateCount();
             }
