@@ -27,7 +27,9 @@ public class questionManager : MonoBehaviour
 
 
     private int counter = 0;
-    private const int totalQuestions = 8; // i looked up "const"
+    
+    // "const" probably isn't needed here, but I used google to learn it was a way to ensure the variable isn't changed.
+    private const int totalQuestions = 8;
     private bool answered = false;
     private int sortingLayerIndex = 10000;
 
@@ -98,12 +100,16 @@ public class questionManager : MonoBehaviour
         "Kiribati is the only country that lies in all four hemispheres."
     };
 
+    // I asked AI for this line. I did not want another class changing this.
     public string CorrectAnswer { get; private set; }
 
     void Start()
     {
         ogFlags = new List<GameObject>(flags);
     }
+
+    // I had an older friend who had previously taken this class help me with this method. We talked about it 
+    // together, this was basically effective in getting the correct flag to show without ordering/overlap issues.
 
     private void ShowFlag(int index)
     {
@@ -160,6 +166,8 @@ public class questionManager : MonoBehaviour
             ab.buttonText.fontStyle = FontStyles.Normal;
         }
 
+        // I looked up text formatting syntax for lines 185 and 200
+
         foreach (answerButtonScript ab in answerButtons)
         {
             if (ab.buttonText.text == CorrectAnswer)
@@ -212,11 +220,11 @@ public class questionManager : MonoBehaviour
         }
     }
 
+    // I used AI to provide instructions on how to deep-copy the flag list since it worked differently from
+    // my other lists. The flag list has the elements assigned in instructor, so I needed a different way to reset them.
     public void ResetQuestions()
     {
-        counter = 0;
-
-        // this is reused from above
+        counter = 0; 
 
     questions = new List<string>()
     {

@@ -15,11 +15,12 @@ public class timerScript : MonoBehaviour
     [SerializeField] private GameObject endScreen;
     [SerializeField] private questionManager qm;
     private bool running = false;
+
+    // I used a tutorial that I linked in the submission to help me work on this.
     void Start()
     {
         running = false;
         enabled = true;
-      
     }
     void Update()
     {
@@ -40,7 +41,8 @@ public class timerScript : MonoBehaviour
             enabled = false;
             qm.ForceAnswer(); 
 
-            if (!endScreen.activeSelf) // i looked up .activeSelf
+            // I looked up the syntax for this on google.
+            if (!endScreen.activeSelf)
             {
                 sm.Answer();
             }

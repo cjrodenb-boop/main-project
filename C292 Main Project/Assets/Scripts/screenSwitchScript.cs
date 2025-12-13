@@ -20,8 +20,8 @@ public class screenSwitchScript : MonoBehaviour
     [SerializeField] private GameObject button3;
     [SerializeField] private GameObject button4;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // After writing these methods, I gave this to AI a few separate times to make sure that I was calling methods and 
+    // setting things active in an order that would not cause anything to break.
     void Start()
     {
         funSong.Play();
@@ -73,7 +73,7 @@ public class screenSwitchScript : MonoBehaviour
     public void End()
     {
         funSong.Play();
-        questionScreen.SetActive(false); // found bug with answer and end screen
+        questionScreen.SetActive(false);
         answerScreen.SetActive(false);
         endScreen.SetActive(true);
         button1.SetActive(false);

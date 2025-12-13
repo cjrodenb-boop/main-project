@@ -44,7 +44,7 @@ public class answersManager : MonoBehaviour
 
         for (int i = 0; i < buttons.Length; i++)
         {
-            TMP_Text buttonText = buttons[i].GetComponentInChildren<TMP_Text>(); // im not sure if this is correct
+            TMP_Text buttonText = buttons[i].GetComponentInChildren<TMP_Text>();
             buttonText.text = selected[i];
         }  
     } 
